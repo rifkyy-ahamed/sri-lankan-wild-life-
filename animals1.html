@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lankan Wildlife</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="animals.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="./animals.js"></script>
+</head>
+
+<body>
+    <main class="main">
+        <!--nav section starts here-->
+        <header>
+            <nav class="nav">
+                <section>
+                    <img src="s-removebg-preview.png" alt="logo" class="logo">
+                </section>
+
+                <ul class="nav-10">
+                    <li><a href="index1.html" class="active">Home</a></li>
+                    <li><a href="./introduction1.html">Introduction</a></li>
+                    <li><a href="aboutus1.html">About us</a></li>
+                    <li><a href="leopard1.html">Leopard</T></a></li>
+                    <li><a href="animals1.html">Animals</a>
+                        <ul class="sub-menu">
+                            <li><a href="yala.html">Yala National Park</a></li>
+                            <li><a href="willpathu.html">Wilpattu National Park</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="nav-buttons">
+                            <button class="btn btn-primary login-btn"><a href="./register.html">Log out</a></button>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <section class="container">
+                <section class="card__container">
+
+                    <article class="card__article">
+                        <img src="card-photo1.webp" alt="image" class="card__img">
+
+                        <section class="card__data">
+                            <span class="card__description">Yala National Park</span>
+                            <h2 class="card__title">Designated in 1900</h2>
+                            <a href="yala1.html" class="card__button">Explore More</a>
+                        </section>
+                    </article>
+
+                    <article class="card__article">
+                        <img src="card-photo2.webp" alt="image" class="card__img">
+
+                        <section class="card__data">
+                            <span class="card__description">Wilpattu National Park</span>
+                            <h2 class="card__title">Designated in 1938</h2>
+                            <a href="willpathu1.html" class="card__button">Explore More</a>
+                        </section>
+                    </article>
+
+                </section>
+            </section>
+
+        </header>
+    </main>
+
+    <section x-data="animalsData">
+
+        <section id="editModal" class="modal">
+            <h1 class="model-title">Edit Content</h1>
+            <!-- Modal content -->
+            <section class="modal-content">
+                <textarea id="Onep" placeholder="Edit paragraph" class="paragraph"></textarea>
+                <textarea id="Oneh1" placeholder="Edit heading" class="heading"></textarea>
+                <textarea id="Onep1" placeholder="Edit paragraph" class="paragraph"></textarea>
+                <textarea id="Oneh2" placeholder="Edit heading" class="heading"></textarea>
+                <textarea id="Onep2" placeholder="Edit paragraph" class="paragraph"></textarea>
+                <textarea id="Oneh3" placeholder="Edit heading" class="heading"></textarea>
+                <textarea id="Onep3" placeholder="Edit paragraph" class="paragraph"></textarea>
+                <textarea id="Oneh4" placeholder="Edit heading" class="heading"></textarea>
+                <textarea id="Onep4" placeholder="Edit paragraph" class="paragraph"></textarea>
+                <textarea id="Oneh5" placeholder="Edit heading" class="heading"></textarea>
+                <textarea id="Onep5" placeholder="Edit paragraph" class="paragraph"></textarea>
+                <textarea id="Oneh6" placeholder="Edit heading" class="heading"></textarea>
+                <textarea id="Onep6" placeholder="Edit paragraph" class="paragraph"></textarea>
+                <textarea id="Oneh7" placeholder="Edit heading" class="heading"></textarea>
+                <textarea id="Onep7" placeholder="Edit paragraph" class="paragraph"></textarea>
+                <textarea id="Oneh8" placeholder="Edit heading" class="heading"></textarea>
+                <textarea id="Onep8" placeholder="Edit paragraph" class="paragraph"></textarea>
+                <textarea id="Oneh9" placeholder="Edit heading" class="heading"></textarea>
+                <textarea id="Onep9" placeholder="Edit paragraph" class="paragraph"></textarea>
+                <textarea id="Oneh10" placeholder="Edit heading" class="heading"></textarea>
+                <textarea id="Onep10" placeholder="Edit paragraph" class="paragraph"></textarea>
+
+                
+            
+
+            </section>
+            <button onclick="saveChanges()" class="model-button">Save Changes</button>
+            <button onclick="closeEditor()" class="model-button">Close</button>
+        </section>
+        <button onclick="openEditor()" class="editbtn">Click To Edit Content</button>
+
+
+        <section class="para-1">
+            <p x-text="numberOnep" id="onep" class="onep"></p>
+        </section>
+
+
+        <section class="sec-1">
+            <h2>Mammals</h2>
+        </section>
+
+
+        <section class="poi">
+            <section class="poi-1">
+
+                <section class="card">
+                    <img src="mammals-p-1.webp" alt="card-img" class="card-img">
+
+                    <section class="card-body">
+                        <h1 class="card-title" x-text="numberOneh1" id="oneh1"></h1>
+                        <p class="card-sub-title" x-text="numberOnep1" id="onep1"></p>
+                    </section>
+                </section>
+
+                <section class="card">
+                    <img src="mammals-p-2.webp" alt="card-img" class="card-img">
+
+                    <section class="card-body">
+                        <h1 class="card-title" x-text="numberOneh2" id="oneh1" ></h1>
+                        <p class="card-sub-title" x-text="numberOnep2" id="onep2"></p>
+                    </section>
+                </section>
+
+                <section class="card">
+                    <img src="mammals-p-3.webp" alt="card-img" class="card-img">
+
+                    <section class="card-body">
+                        <h1 class="card-title" x-text="numberOneh3" id="oneh3"></h1>
+                        <p class="card-sub-title" x-text="numberOnep3" id="onep3"></p>
+                    </section>
+                </section>
+
+                <section class="card">
+                    <img src="mammals-p-4.webp" alt="card-img" class="card-img">
+
+                    <section class="card-body">
+                        <h1 class="card-title"  x-text="numberOneh4" id="oneh4"></h1>
+                        <p class="card-sub-title" x-text="numberOnep4" id="onep4"></p>
+                    </section>
+                </section>
+
+            </section>
+        </section>
+
+        <!--first section css Connected to this -->
+
+        <section class="sec-2">
+            <h2>Birds</h2>
+        </section>
+
+        <section class="poi">
+            <section class="poi-1">
+
+                <section class="card">
+                    <img src="bird-1.webp" alt="card-img" class="card-img">
+
+                    <section class="card-body">
+                        <h1 class="card-title" x-text="numberOneh5" id="oneh5"></h1>
+                        <p class="card-sub-title" x-text="numberOnep5" id="onep5"></p>
+                    </section>
+                </section>
+
+                <section class="card">
+                    <img src="bird-2.webp" alt="card-img" class="card-img">
+
+                    <section class="card-body">
+                        <h1 class="card-title"  x-text="numberOneh6" id="oneh6"></h1>
+                        <p class="card-sub-title" x-text="numberOnep6" id="onep6">
+                        </p>
+                    </section>
+                </section>
+
+                <section class="card">
+                    <img src="bird-3.webp" alt="card-img" class="card-img">
+
+                    <section class="card-body">
+                        <h1 class="card-title" x-text="numberOneh7" id="oneh7"></h1>
+                        <p class="card-sub-title"  x-text="numberOnep7" id="onep7"></p>
+                    </section>
+                </section>
+
+            </section>
+        </section>
+
+        <!--first section css Connected to this -->
+
+        <section class="sec-3">
+            <h2>Reptiles</h2>
+        </section>
+
+
+        <section class="poi">
+            <section class="poi-1">
+
+                <section class="card">
+                    <img src="Reptiles-1.webp" alt="card-img" class="card-img">
+
+                    <section class="card-body">
+                        <h1 class="card-title" x-text="numberOneh8" id="oneh8"></h1>
+                        <p class="card-sub-title"  x-text="numberOnep8"  id="onep8"></p>
+                    </section>
+                </section>
+
+                <section class="card">
+                    <img src="Reptiles-2.webp" alt="card-img" class="card-img">
+
+                    <section class="card-body">
+                        <h1 class="card-title" x-text="numberOneh9" id="oneh9"></h1>
+                        <p class="card-sub-title"  x-text="numberOnep9"  id="onep9"></p>
+                    </section>
+                </section>
+
+                <section class="card">
+                    <img src="Reptiles-3.webp" alt="card-img" class="card-img">
+
+                    <section class="card-body">
+                        <h1 class="card-title" x-text="numberOneh10" id="oneh10"></h1>
+                        <p class="card-sub-title"  x-text="numberOnep10"  id="onep10">
+                            </p>
+                    </section>
+                </section>
+
+
+            </section>
+        </section>
+
+
+        <section class="sec-4">
+            <h2>Here's a breakdown of wildlife percentages for some specific animal groups in Sri Lanka:</h2>
+        </section>
+
+    </section>
+
+
+    <section>
+        <div class="skills-wrapper">
+            <div class="skill">
+                <div class="content">
+                    <span>16.8%</span>
+                    <span>Mammals</span>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="content">
+                    <span>11.89%</span>
+                    <span>Birds</span>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="content">
+                    <span>65.33%</span>
+                    <span>Reptile</span>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="content">
+                    <span>91.66%</span>
+                    <span>Amphibians</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <section class="footer-1">
+            <section class="footer-2">
+
+                <section class="footer-3">
+                    <ul class="bq">
+                        <li><a href="index1.html">Home</a></li>
+                        <li><a href="introduction1.html">Introduction</a></li>
+                        <li><a href="aboutus1.html">About Us</a></li>
+                        <li><a href="leopard1.html">Leopard</a></li>
+                        <li><a href="animals1.html">Animals</a></li>
+                    </ul>
+                </section>
+
+                <section class="footer-3">
+                    <h4>Follow Us</h4>
+                    <h5>Stay Connected On Social Media.</h5>
+                    <section class="social-links">
+                        <a href="https://web.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    </section>
+                </section>
+
+
+                <section class="footer-3">
+                    <h4 class="lol">Contact Us</h4>
+                    <ul>
+                        <li>Email: SrilankaWildlife@gmail.com</li>
+                        <li class="pot">Phone: 072-492-8801</li>
+                    </ul>
+                </section>
+                <form id="newsletter-form">
+                    <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+
+            </section>
+
+            <script>
+                
+                function saveSubscribers(subscribers) {
+                    localStorage.setItem('subscribers', JSON.stringify(subscribers));
+                }
+        
+                
+                function getSubscribers() {
+                    const subscribersString = localStorage.getItem('subscribers');
+                    return subscribersString ? JSON.parse(subscribersString) : [];
+                }
+        
+                
+                function showSubscribers() {
+                    const subscribers = getSubscribers();
+                    const subscriberList = document.getElementById('subscriber-list');
+                    subscriberList.innerHTML = ''; // Clear previous entries
+                    subscribers.forEach((subscriber, index) => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `${index + 1}. ${subscriber.email}`;
+                        subscriberList.appendChild(listItem);
+                    });
+                }
+        
+                
+                document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+                    event.preventDefault(); 
+        
+                    const emailInput = document.getElementById('email');
+                    const email = emailInput.value.trim();
+        
+                    if (email !== '') {
+                        const subscribers = getSubscribers();
+                        subscribers.push(email);
+                        saveSubscribers(subscribers);
+                        showSubscribers(); // Update subscriber list
+                        emailInput.value = ''; // Clear input field
+                    }
+                });
+        
+                // Show subscribers when the page loads
+                showSubscribers();
+                window.location.href = 'database.html';
+
+
+
+                
+            </script>
+        </section>
+    </footer>
+
+
+
+</body>
+</html>

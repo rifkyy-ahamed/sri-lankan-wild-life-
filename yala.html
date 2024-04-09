@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sri Lanka's Wildlife </title>
+    <link rel="stylesheet" href="yala.css">
+</head>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="//unpkg.com/alpinejs" defer></script>
+<script src="./yala.js"></script>
+
+<body>
+    <main class="main">
+        <!--nav section starts here-->
+        <header>
+            <nav class="nav">
+                <section>
+                    <img src="s-removebg-preview.png" alt="logo" class="logo">
+                </section>
+
+                <ul class="nav-10">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="./introduction.html">Introduction</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="leopard.html">Leopard</T></a></li>
+                    <li><a href="animals.html">Animals</a>
+                        <ul class="sub-menu">
+                            <li><a href="yala.html">Yala National Park</a></li>
+                            <li><a href="willpathu.html">Wilpattu National Park</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="nav-buttons">
+                            <button class="btn btn-primary login-btn"><a href="./register.html">Login</a></button>
+                            <button class="btn btn-success signup-btn"><a href="./register.html">Sign Up</a></button>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <section class="topic-1">
+                <h3>YALA NATIONAL PARK</h3>
+                <h1>SRI LANKAN'S PREMIER WILDERNESS RETREAT</h1>
+            </section>
+
+            <section class="Explore">
+                <a href="#down">Explore More</a>
+            </section>
+
+        </header>
+    </main>
+
+
+    <section x-data="yalaData">
+
+
+        <section class="con" id="down">
+            <section class="con-1">
+                <h1 class="con-h1" x-text="numberOneh1" ></h1>
+                <p x-text="numberOnep" class="sevenp1"></p>
+            </section>
+        </section>
+
+
+
+        <section class="image">
+
+            <section>
+                <h2 class="h-2" x-text="numberOneh2"></h2>
+            </section>
+
+
+            <section class="card">
+                <section class="card-photo" style="background-image: url(yala-card-1.webp);">
+                </section>
+                <section class="card-info">
+                    <h3 class="title"  x-text="numberOneh3"></h3>
+                    <section class="card-p">
+                        <p x-text="numberOnep1" class="sevenp2"></p>
+                    </section>
+                </section>
+            </section>
+
+
+            <section class="card">
+                <section class="card-photo" style="background-image: url(yala-card-2.jpg);">
+                </section>
+                <section class="card-info">
+                    <h3 class="title-1" x-text="numberOneh4"></h3>
+                    <section class="card-p-1">
+                        <p x-text="numberOnep2" class="sevenp3"></p>
+                        <ul class="p-ul">
+                            <li x-text="numberOneli1" class="li1"></li>
+                            <li x-text="numberOneli2" class="li2"></li>
+                            <li x-text="numberOneli3" class="li3"></li>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+
+
+            <section class="card">
+                <section class="card-photo" style="background-image: url(yala-card-3.jpg);">
+                </section>
+                <section class="card-info">
+                    <h3 class="title-1"  x-text="numberOneh5" id="title-1"></h3>
+                    <section class="card-p-1">
+                        <p x-text="numberOnep3" class="sevenp4"></p>
+                        <ul class="p-ul">
+                            <li x-text="numberOneli4" class="li4"></li>
+                            <li x-text="numberOneli5" class="li5"></li>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+    </section>
+
+        <footer class="footer">
+            <section class="footer-1">
+                <section class="footer-2">
+
+                    <section class="footer-3">
+                        <ul class="bq">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="introduction.html">Introduction</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="leopard.html">Leopard</a></li>
+                            <li><a href="animals.html">Animals</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="footer-3">
+                        <h4>Follow Us</h4>
+                        <h5>Stay Connected On Social Media.</h5>
+                        <section class="social-links">
+                            <a href="https://web.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        </section>
+                    </section>
+
+
+                    <section class="footer-3">
+                        <h4 class="lol">Contact Us</h4>
+                        <ul>
+                            <li>Email: SrilankaWildlife@gmail.com</li>
+                            <li class="pot">Phone: 072-492-8801</li>
+                        </ul>
+                    </section>
+                    <form id="newsletter-form">
+                        <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+
+                </section>
+
+                <script>
+                
+                    function saveSubscribers(subscribers) {
+                        localStorage.setItem('subscribers', JSON.stringify(subscribers));
+                    }
+            
+                    
+                    function getSubscribers() {
+                        const subscribersString = localStorage.getItem('subscribers');
+                        return subscribersString ? JSON.parse(subscribersString) : [];
+                    }
+            
+                    
+                    function showSubscribers() {
+                        const subscribers = getSubscribers();
+                        const subscriberList = document.getElementById('subscriber-list');
+                        subscriberList.innerHTML = ''; // Clear previous entries
+                        subscribers.forEach((subscriber, index) => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = `${index + 1}. ${subscriber.email}`;
+                            subscriberList.appendChild(listItem);
+                        });
+                    }
+            
+                    
+                    document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+                        event.preventDefault(); 
+            
+                        const emailInput = document.getElementById('email');
+                        const email = emailInput.value.trim();
+            
+                        if (email !== '') {
+                            const subscribers = getSubscribers();
+                            subscribers.push(email);
+                            saveSubscribers(subscribers);
+                            showSubscribers(); // Update subscriber list
+                            emailInput.value = ''; // Clear input field
+                        }
+                    });
+            
+                    // Show subscribers when the page loads
+                    showSubscribers();
+                    window.location.href = 'database.html';
+    
+    
+    
+                    
+                </script>
+                
+            </section>
+        </footer>
+
+</html>
+</body>

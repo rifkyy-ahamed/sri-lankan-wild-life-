@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lankan Wildlife</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="introduction.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="./introduction.js"></script>
+
+</head>
+
+<body>
+    <main class="main-10">
+        <!--nav section starts here-->
+        <header>
+            <nav class="nav">
+                <section>
+                    <img src="s-removebg-preview.png" alt="logo" class="logo">
+                </section>
+
+                <ul class="nav-10">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="./introduction.html">Introduction</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="leopard.html">Leopard</T></a></li>
+                    <li><a href="animals.html">Animals</a>
+                        <ul class="sub-menu">
+                            <li><a href="yala.html">Yala National Park</a></li>
+                            <li><a href="willpathu.html">Wilpattu National Park</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="nav-buttons">
+                            <button class="btn btn-primary login-btn"><a href="./register.html">Login</a></button>
+                            <button class="btn btn-success signup-btn"><a href="./register.html">Sign Up</a></button>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <section x-data="introductionData">
+
+                <section class="intro-topic-1">
+                    <h1 x-text="descriptionIntro"> </h1>
+                    <p x-text="descriptionIntrOne"></p>
+                    <a href="#down-1">Explore More</a>
+                </section>
+
+                <section class="intro-sec-1" id="down-1">
+
+                    <img src="Singharaja_Rain_Forest.webp" alt="image">
+                    <section class="intro-sec-2">
+                        <h1 x-text="numberOne" class="twoh1"></h1>
+                        <p class="intro-sec-2-p" x-text="numberOnep"></p>
+                        <h2 x-text="numberOneh1" class="twoh2"></h2>
+                        <ul class="space-1">
+                            <li>
+                                <p x-text="numberOnep1" class="twoli1"></p>
+                            </li>
+                            <li>
+                                <p x-text="numberOnep2" class="twoli2"></p>
+                            </li>
+                            <li>
+                                <p x-text="numberOnep3" class="twoli3"></p>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                <p id="Sinharaja-map"><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.899115223051!2d80.45745167581636!3d6.406996124504549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3e76bd109d45f%3A0x8c0ef1010649701b!2sSinharaja%20Forest%20Reserve!5e0!3m2!1sen!2slk!4v1704298584699!5m2!1sen!2slk"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+
+
+                <section class="intro-sec-3">
+                    <img src="Horton-plains.webp" alt="image">
+                    <section class="intro-sec-4">
+                        <h1 x-text="numbertwo" class="twoh3"></h1>
+                        <p class="intro-sec-4-p" x-text="numbertwop"></p>
+                        <h2 x-text="numbertwoh1" class="twoh4"></h2>
+                        <ul class="space-2">
+                            <li>
+                                <p x-text="numbertwop1" class="twoli4"></p>
+                            </li>
+                            <li>
+                                <p x-text="numbertwop2" class="twoli5"></p>
+                            </li>
+                            <li>
+                                <p x-text="numbertwop3" class="twoli6"></p>
+                            </li>
+                            <li>
+                                <p x-text="numbertwop4" class="twoli7"></p>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                <p id="Horton -map"><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.6739945881277!2d80.79975837581752!3d6.809451319772637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3882edb4b78ef%3A0xcebca89153777249!2sHorton%20Plains%20National%20Park!5e0!3m2!1sen!2slk!4v1704298741377!5m2!1sen!2slk"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+
+
+                <section class="intro-sec-5">
+                    <img src="Kumana National Park.webp" alt="image">
+                    <section class="intro-sec-6">
+                        <h1 x-text="numberthree" class="twoh5"></h1>
+                        <p class="intro-sec-6-p" x-text="numberthreep"></p>
+                        <h2 x-text="numberthreeh1" class="twoh6"></h2>
+                        <ul class="space-3">
+                            <li>
+                                <p x-text="numberthreep1" class="twoli8"></p>
+                            </li>
+                            <li>
+                                <p x-text="numberthreep2" class="twoli9"></p>
+                            </li>
+                            <li>
+                                <p x-text="numberthreep3" class="twoli10"></p>
+                            </li>
+                            <li>
+                                <p x-text="numberthreep4" class="twoli11"></p>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                <p id="Kumana-map"><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.6739945881277!2d80.79975837581752!3d6.809451319772637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3882edb4b78ef%3A0xcebca89153777249!2sHorton%20Plains%20National%20Park!5e0!3m2!1sen!2slk!4v1704298741377!5m2!1sen!2slk"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+
+
+
+                <section class="intro-sec-7">
+                    <img src="Hikkaduwa Marine National Park.webp" alt="image">
+                    <section class="intro-sec-8">
+                        <h1 x-text="numberfour" class="twoh7"></h1>
+                        <p class="intro-sec-8-p" x-text="numberfourp"></p>
+                        <h2 x-text="numberfourh2" class="twoh8"></h2>
+                        <ul class="space-4">
+                            <li>
+                                <p x-text="numberfourp1" class="twoli12"></p>
+                            </li>
+                            <li>
+                                <p x-text="numberfourp2" class="twoli13"></p>
+                            </li>
+                            <li>
+                                <p x-text="numberfourp3" class="twoli14"></p>
+                            </li>
+                            <li>
+                                <p x-text="numberfourp4" class="twoli15"></p>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+            <p id="Hikkaduwa-map"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9500786858976!2d80.09663587581565!3d6.137409627527899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae1770f548d710b%3A0x159baa380959fcaa!2sHikkaduwa%20Marine%20National%20Park!5e0!3m2!1sen!2slk!4v1704298881821!5m2!1sen!2slk"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+
+            <section class="body">
+                <main class="table">
+                    <section class="table-blur">
+                        <section class="table_header">
+                            <h1>WILDLIFE ENCOUNTERS AWAIT</h1>
+                        </section>
+                        <section class="table_body">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Wildlife</th>
+                                        <th>Interesting Facts</th>
+                                        <th>Image</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sri Lankan Leopard</td>
+                                        <td>The world's smallest leopard subspecies, known for its elusive nature and
+                                            spotted coat.</td>
+                                        <td><img src="leopad-table.webp" alt="img"></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Asian Elephant</td>
+                                        <td>Gentle giants roaming Sri Lanka's plains and forests, displaying remarkable
+                                            intelligence and social bonds</td>
+                                        <td><img src="elephent-table.webp" alt="img"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Purple-faced Langur</td>
+                                        <td>Endemic monkeys with mesmerizing purple faces and impressive acrobatic
+                                            skills, swinging through the rainforest canopy.</td>
+                                        <td><img src="lunger-table.webp" alt="img"></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Greater Flamingo</td>
+                                        <td>Graceful pink waders migrating to Sri Lanka's lagoons, forming spectacular
+                                            feeding flocks during the dry season.</td>
+                                        <td><img src="Flamingo-table.webp" alt="img"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hawksbill turtle</td>
+                                        <td>Critically endangered marine turtles with beaks resembling a hawk's, nesting
+                                            on Sri Lanka's shores.</td>
+                                        <td><img src="turtle-table.webp" alt="img"></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </section>
+                </main>
+            </section>
+
+            <footer class="footer">
+                <section class="footer-1">
+                    <section class="footer-2">
+
+                        <section class="footer-3">
+                            <ul class="bq">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="introduction.html">Introduction</a></li>
+                                <li><a href="aboutus.html">About Us</a></li>
+                                <li><a href="leopard.html">Leopard</a></li>
+                                <li><a href="animals.html">Animals</a></li>
+                            </ul>
+                        </section>
+
+                        <section class="footer-3">
+                            <h4>Follow Us</h4>
+                            <h5>Stay Connected On Social Media.</h5>
+                            <section class="social-links">
+                                <a href="https://web.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            </section>
+                        </section>
+
+
+                        <section class="footer-3">
+                            <h4 class="lol">Contact Us</h4>
+                            <ul>
+                                <li>Email: SrilankaWildlife@gmail.com</li>
+                                <li class="pot">Phone: 072-492-8801</li>
+                            </ul>
+                        </section>
+                        <form id="newsletter-form">
+                            <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+
+                    </section>
+
+                    <script>
+                
+                        function saveSubscribers(subscribers) {
+                            localStorage.setItem('subscribers', JSON.stringify(subscribers));
+                        }
+                
+                        
+                        function getSubscribers() {
+                            const subscribersString = localStorage.getItem('subscribers');
+                            return subscribersString ? JSON.parse(subscribersString) : [];
+                        }
+                
+                        
+                        function showSubscribers() {
+                            const subscribers = getSubscribers();
+                            const subscriberList = document.getElementById('subscriber-list');
+                            subscriberList.innerHTML = ''; // Clear previous entries
+                            subscribers.forEach((subscriber, index) => {
+                                const listItem = document.createElement('li');
+                                listItem.textContent = `${index + 1}. ${subscriber.email}`;
+                                subscriberList.appendChild(listItem);
+                            });
+                        }
+                
+                        
+                        document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+                            event.preventDefault(); 
+                
+                            const emailInput = document.getElementById('email');
+                            const email = emailInput.value.trim();
+                
+                            if (email !== '') {
+                                const subscribers = getSubscribers();
+                                subscribers.push(email);
+                                saveSubscribers(subscribers);
+                                showSubscribers(); // Update subscriber list
+                                emailInput.value = ''; // Clear input field
+                            }
+                        });
+                
+                        // Show subscribers when the page loads
+                        showSubscribers();
+                        window.location.href = 'database.html';
+        
+        
+        
+                        
+                    </script>
+                </section>
+            </footer>
+
+
+        </header>
+    </main>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lankan Wildlife</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="database.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="./database.js"></script>
+
+
+</head>
+
+<body>
+    <main class="main-10">
+        <main1 class="table">
+            <!--nav section starts here-->
+            <header>
+                <nav class="nav">
+                    <section>
+                        <img src="s-removebg-preview.png" alt="logo" class="logo">
+                    </section>
+
+                    <ul class="nav-10">
+                        <li><a href="index1.html" class="active">Home</a></li>
+                        <li><a href="./introduction1.html">Introduction</a></li>
+                        <li><a href="aboutus1.html">About us</a></li>
+                        <li><a href="leopard1.html">Leopard</T></a></li>
+                        <li><a href="animals1.html">Animals</a>
+                            <ul class="sub-menu">
+                                <li><a href="yala1.html">Yala National Park</a></li>
+                                <li><a href="willpathu1.html">Wilpattu National Park</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="nav-buttons">
+                                <button class="btn btn-primary login-btn"><a href="./register.html">Log out</a></button>
+                            </div>
+                        </li>
+                    </ul>
+
+                </nav>
+
+                <section x-data="introductionData">
+
+
+
+                    <section class="body">
+                        <section class="table-blur">
+                            <section class="table_header">
+                                <h1>Users</h1>
+                            </section>
+                            <section class="table_body">
+                                <table id="userTable">
+                                    <thead>
+
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                            <th>Password (Hashed)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </section>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <section class="table_header">
+                                <h1>Subscribers</h1>
+                            </section>
+                            <table class="table_body" id="subscriberTable">
+                                <thead class="mide">
+                                    <tr>
+                                        <th style="border-radius: .5rem;">Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </section>
+                    </section>
+        </main1>
+
+        <script>
+            function sha256(plain) {
+                const encoder = new TextEncoder();
+                const data = encoder.encode(plain);
+                return crypto.subtle.digest('SHA-256', data).then(buffer => {
+                    const hashArray = Array.from(new Uint8Array(buffer));
+                    const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+                    return hashHex;
+                });
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                // Retrieve users from local storage
+                var users = JSON.parse(localStorage.getItem("users"));
+                var subscribers = JSON.parse(localStorage.getItem("subscribers"));
+
+                // Get user table body
+                var userTableBody = document.querySelector("#userTable tbody");
+
+                // Loop through users and create user table rows
+                users.forEach(function (user) {
+                    // Hash the password
+                    sha256(user.password)
+                        .then(function (hashedPassword) {
+                            // Create user table row
+                            var row = document.createElement("tr");
+                            row.innerHTML = "<td>" + user.name + "</td>" +
+                                "<td>" + user.username + "</td>" +
+                                "<td>" + user.email + "</td>" +
+                                "<td>" + hashedPassword + "</td>";
+                            // Append row to user table
+                            userTableBody.appendChild(row);
+                        });
+                });
+
+                // When retrieving subscribers from local storage and displaying them in the table
+                subscribers.forEach(function (subscriber) {
+                    // Check if the subscriber is an object
+                    if (typeof subscriber === 'object' && subscriber !== null) {
+                        // If it's an object, assume it has an 'email' property
+                        var email = subscriber.email;
+                        // Create subscriber table row
+                        var row = document.createElement("tr");
+                        row.innerHTML = "<td>" + email + "</td>";
+                        // Append row to subscriber table
+                        subscriberTableBody.appendChild(row);
+                    } else {
+                        // If it's not an object, assume it's a string (email)
+                        var row = document.createElement("tr");
+                        row.innerHTML = "<td>" + subscriber + "</td>";
+                        // Append row to subscriber table
+                        subscriberTableBody.appendChild(row);
+                    }
+                });
+
+            });
+
+
+
+
+
+
+
+            window.onload = function () {
+                var subscriberTableBody = document.querySelector("#subscriberTable tbody");
+                var subscribers = JSON.parse(localStorage.getItem("subscribers"));
+
+                if (subscribers) {
+                    subscribers.forEach(function (subscriber) {
+                        var row = document.createElement("tr");
+                        row.innerHTML = "<td>" + subscriber + "</td>";
+                        subscriberTableBody.appendChild(row);
+                    });
+                }
+            }
+
+
+
+        </script>
+
+        </header>
+    </main>
+
+</html>

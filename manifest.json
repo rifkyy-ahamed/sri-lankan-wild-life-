@@ -1,0 +1,5 @@
+{  "name": "Wildlife Sri lanka",
+  "short_name": "Wildlife",  "theme_color": "#ffff", 
+   "background_color": "#fff",  "display": "browser", 
+    "orientation": "portrait",  "scope": "/", 
+     "start_url": "/index.html"}
